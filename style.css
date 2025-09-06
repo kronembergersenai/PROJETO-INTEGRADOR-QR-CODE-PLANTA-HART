@@ -1,0 +1,44 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #f6f8fa; color: #333; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Cabeçalho */
+.site-header { position: fixed; top: 0; width: 100%; background: #24292e; z-index: 1000; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+.logo { color: #fff; font-size: 1.25rem; }
+.main-nav ul { display: flex; list-style: none; }
+.main-nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
+
+/* Hero */
+.hero { background: #0366d6; color: #fff; padding: 6rem 0 3rem; margin-top: 60px; }
+.hero-inner { text-align: center; }
+.hero h2 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+.hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+.stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat i { font-size: 2rem; }
+.stat span { display: block; font-size: 1.75rem; font-weight: bold; margin-top: 0.5rem; }
+.stat p { margin-top: 0.25rem; }
+
+/* Seções */
+.section { padding: 3rem 0; }
+.section-title { font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: #24292e; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; }
+
+/* Cards */
+.card { background: #fff; border: 1px solid #e1e4e8; border-radius: 6px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h3 { margin-bottom: 0.75rem; color: #0366d6; }
+.card p, .card ul { margin-bottom: 0.75rem; }
+.card ul { list-style: disc inside; }
+.reminder { font-size: 0.9rem; color: #586069; }
+
+/* Rodapé */
+.site-footer { background: #24292e; color: #c9d1d9; padding: 1rem 0; text-align: center; font-size: 0.9rem; }
+
+/* Responsividade */
+@media(max-width: 600px) {
+  .main-nav ul { flex-direction: column; background: #24292e; position: absolute; top: 60px; left: -100%; width: 100%; transition: left .3s; }
+  .main-nav ul.open { left: 0; }
+  .hero { padding-top: 8rem; }
+}
